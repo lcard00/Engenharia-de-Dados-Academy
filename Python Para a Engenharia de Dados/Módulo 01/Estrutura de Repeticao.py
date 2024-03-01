@@ -1,6 +1,5 @@
 # https://wiki.python.org.br/EstruturaDeRepeticao
 
-from os import system, name
 from utils import msg_aguardar
 import numpy
 import math
@@ -19,7 +18,14 @@ menu = """
     [4] Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.
     [5]
     [6] Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para que ele mostre os números um ao lado do outro.
-
+    [10] Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
+    [12] Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
+            Tabuada de 5:
+            5 X 1 = 5
+            5 X 2 = 10
+            ...
+            5 X 10 = 50
+    
     [q] Sair
 
 => """
@@ -188,6 +194,36 @@ while True:
 
             print()
             msg_aguardar()
+
+        case "10":
+            numero_1 = int(input("Informe o primeiro número: "))
+            numero_2 = int(input("Informe o segundo número: "))
+            
+            r = range(numero_1 + 1 , numero_2, 1)
+            
+            print(f"\nOs números que estão entre {numero_1} e número {numero_2}, são: \n")
+            
+            for numero in r:
+                print(f"\t{numero}")
+            
+            msg_aguardar()
+        
+        case "12":
+            r = range(1,11,1)
+            
+            while True:
+                numero = int(input("Informe o número o qual deseja saber a tabuada: "))
+
+                if numero in r:
+                    print(f"Tabuada de {numero}: ")
+                    for n in r:
+                        print(f"\t{numero} X {n} = {numero * n}")
+
+                    msg_aguardar()
+                    break
+                else:
+                    print(f"O numero informado deve estar entre 1 e 10.")
+                    msg_aguardar()
 
         case "q":
             print("Saindo...")
