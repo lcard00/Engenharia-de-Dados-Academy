@@ -1,19 +1,9 @@
 # https://wiki.python.org.br/EstruturaSequencial
 
 from os import system, name
+from utils import msg_aguardar
 import numpy
 import math
-
-
-def msg_aguardar():
-    print("\nPressione qualquer tecla para continuar.")
-    input()
-
-    if name == "nt":
-        system("CLS")
-    else:
-        system("clear")
-
 
 menu = """
     Informe qual o exercicio que resolver:
