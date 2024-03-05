@@ -15,7 +15,7 @@ tupla[0]
 # print(1 in tupla)
 
 # for item in tupla:
-#     print(item)
+#     print(item) 
 
 len(tupla)
 
