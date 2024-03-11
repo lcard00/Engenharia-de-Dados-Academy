@@ -19,3 +19,4 @@ tupla[0]
 
 len(tupla)
 
+print(tupla)
