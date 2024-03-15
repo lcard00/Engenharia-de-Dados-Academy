@@ -1,4 +1,5 @@
-from os import system, name
+from os import name
+import subprocess
 import numpy
 import math
 
@@ -7,9 +8,11 @@ def msg_aguardar():
     input()
 
     if name == "nt":
-        system("CLS")
+        command= "cls"      
+        subprocess.run(command, shell=False)
     else:
-        system("clear")
+        command= "clear"
+        subprocess.run(command, shell=False)
 
 # menu = """
 #     Informe qual o exercicio que resolver:

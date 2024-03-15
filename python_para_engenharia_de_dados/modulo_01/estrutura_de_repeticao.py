@@ -147,13 +147,15 @@ while True:
                     and sexo_validado
                     and estado_civil_validado
                 ):
-                    texto = f"Dados validos.\n\t"
-                    texto += f"Nome: {nome}\n\t"
-                    texto += f"Idade: {idade}\n\t"
-                    texto += f"Salario: R${salario:.2f}\n\t"
-                    texto += f"Sexo: {sexo}\n\t"
-                    texto += f"Estado Civil: {estado_civil}\n\t"
-
+                    texto = str.join( 
+                        f"Dados validos.\n\t",
+                        f"Nome: {nome}\n\t",
+                        f"Idade: {idade}\n\t",
+                        f"Salario: R${salario:.2f}\n\t",
+                        f"Sexo: {sexo}\n\t",
+                        f"Estado Civil: {estado_civil}\n\t",
+                    )
+                    
                     print(texto)
                     msg_aguardar()
                     break
